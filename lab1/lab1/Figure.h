@@ -24,7 +24,6 @@ public:
     void setA(double value);
     void setB(double value);
 
-    virtual double calculateArea() const = 0;
     virtual void draw() const = 0;
     virtual void show() const = 0;
 };

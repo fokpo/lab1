@@ -130,10 +130,12 @@
     <ClCompile Include="Figure.cpp" />
     <ClCompile Include="FlatFigure.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SolidFigure.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Figure.h" />
     <ClInclude Include="FlatFigure.h" />
+    <ClInclude Include="SolidFigure.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -10,7 +10,7 @@ public:
     FlatFigure(const FlatFigure& other);
     ~FlatFigure() override;
 
-    double calculateArea() const override;
+    double calculateArea() const;
     void draw() const override;
     void show() const override;
 };

@@ -27,8 +27,9 @@ FlatFigure::FlatFigure(const FlatFigure& other) : Figure(other) {
 }
 
 FlatFigure::~FlatFigure() {
-    std::cout << "[[FlatFigure] destructor called.\n";
+    std::cout << "[FlatFigure] destructor called.\n";
 }
+
 //площади
 double FlatFigure::calculateArea() const {
     const std::string type = getType();
@@ -42,9 +43,11 @@ void FlatFigure::draw() const {
     std::cout << "Schematic drawing of " << type << ":\n";
     if (type == "Circle") {
         std::cout << "   ***   \n *       *\n*         *\n *       *\n   ***   \n";
-    } else if (type == "Triangle") {
+    }
+    else if (type == "Triangle") {
         std::cout << "    /\\\n   /  \\\n  /____\\\n";
-    } else {
+    }
+    else {
         std::cout << "+----------+\n|          |\n|          |\n+----------+\n";
     }
 }

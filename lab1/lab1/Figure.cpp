@@ -1,8 +1,9 @@
 #include "Figure.h"
 #include <stdexcept>
+
 //конструкторы+ловля ошибок
 Figure::Figure() : type("Undefined"), a(1.0), b(1.0) {
-    std::cout << "Figure default constructor called.\n";
+    std::cout << "[Figure] default constructor called.\n";
 }
 
 Figure::Figure(const std::string& typeValue, double sideA, double sideB)
@@ -13,16 +14,16 @@ Figure::Figure(const std::string& typeValue, double sideA, double sideB)
     if (a <= 0.0 || b <= 0.0) {
         throw std::invalid_argument("Figure dimensions must be positive.");
     }
-    std::cout << "Figure parameterized constructor called.\n";
+    std::cout << "[Figure] parameterized constructor called.\n";
 }
 
 Figure::Figure(const Figure& other)
     : type(other.type), a(other.a), b(other.b) {
-    std::cout << "Figure copy constructor called.\n";
+    std::cout << "[Figure] copy constructor called.\n";
 }
 
 Figure::~Figure() {
-    std::cout << "Figure destructor called.\n";
+    std::cout << "[Figure] destructor called.\n";
 }
 
 std::string Figure::getType() const { return type; }
@@ -43,6 +44,7 @@ void Figure::setB(double value) {
     if (value <= 0.0) throw std::invalid_argument("Dimension B must be positive.");
     b = value;
 }
+
 //перегрузка операторов
 std::ostream& operator<<(std::ostream& out, const Figure& figure) {
     out << "Type: " << figure.getType()
